@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/*.log
+logs/*.jsonl
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Docker local data
+docker-data/
