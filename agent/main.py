@@ -9,7 +9,6 @@ from .agent import Agent
 from .config import AGENT_NAME, MAX_MESSAGES
 from .provider import ProviderError
 
-
 logger = logging.getLogger("agent.main")
 
 
@@ -46,10 +45,14 @@ def run_chat(agent: Agent) -> None:
         if not user_text:
             continue
 
-        if user_text in ("/exit", "/quit"):
+        if user_text in ("/exit", "/quit", "/end"):
             print("Bye.")
             break
 
+        if user_text == "/usage":
+            print(agent.tracker.get_summary_text())
+            continue
+        
         if user_text == "/reset":
             agent.reset()
             print("[history cleared]")
