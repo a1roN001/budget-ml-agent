@@ -58,4 +58,4 @@ def chat_completion(messages: list[dict], model: str) -> str:
     if not content or not content.strip():
         raise ProviderError("Provider returned empty response content")
 
-    return content
+    return response
